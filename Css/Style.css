@@ -1,0 +1,25 @@
+﻿
+/*
+    max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+*/
+/*!important nếu muốn viết đè css*/
+body {
+    background-color: blue;
+}
+@media all and (max-width:1024px) {
+    body {
+    background-color:red;
+    }
+}
+/*thiết bị di động*/
+@media all and (max-width:480px) {
+    body {
+        background-color: yellow;
+    }
+}
