@@ -1,4 +1,519 @@
-﻿
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+#header {
+    background-color: #f6f6f6;
+    height: auto;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+}
+
+    .logo img {
+        margin-top: 15px;
+        width: 140px;
+        margin-left: 40%;
+    }
+
+.navigator {
+    width: 70%;
+    float: left;
+    position: relative;
+}
+
+    .navigator ul {
+        list-style: none;
+        margin-top: 30px;
+    }
+
+        .navigator ul li {
+            float: left;
+        }
+
+            .navigator ul li a {
+                text-decoration: none;
+                color: black;
+                padding: 7px 15px;
+                text-transform: uppercase;
+            }
+
+            .navigator ul li:last-child :hover {
+                background-color: #f6f6f6;
+            }
+
+            .navigator ul li a:hover {
+                background-color: #f04c52;
+                color: white;
+                text-decoration: underline;
+            }
+
+            .navigator ul li:last-child a:hover {
+                background-color: none;
+            }
+
+.login {
+    position: absolute;
+    right: 15%;
+    top: 5px;
+}
+
+    .login a {
+        text-decoration: none;
+        color: #1b3fca;
+    }
+
+        .login a:hover {
+            -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+            -webkit-mask-size: 200%;
+            animation: shine 2s infinite;
+        }
+
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
+.header-bottom {
+    clear: both;
+    width: 76%;
+    background: #df1f26;
+    height: 40px;
+    margin: auto;
+    position: relative;
+}
+
+.title-list {
+    width: 22%;
+    float: left;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+    .title-list span {
+        color: #fff;
+        line-height: 40px;
+        padding-left: 10%;
+        background: url(../Image/iconmenu.png) no-repeat left 1px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+.header-bottom-right {
+    width: 78%;
+    float: left;
+    height: 40px;
+    background: #c3050c;
+    box-sizing: border-box;
+    padding: 6px;
+    position: relative;
+}
+
+.search-list select {
+    height: 30px;
+    box-sizing: border-box;
+    display: block;
+    width: 16%;
+    border: none;
+    border-right: 1px solid #ddd;
+    float: left;
+    color: #222;
+}
+
+.search input {
+    height: 30px;
+    box-sizing: border-box;
+    display: block;
+    width: 78%;
+    border: none;
+    border-right: 1px solid #ddd;
+    float: left;
+    color: #222;
+    outline: none;
+    padding: 0 1%;
+}
+
+.search-button {
+    width: 6%;
+    background: #333333;
+    color: #fff;
+    border: none;
+    height: 30px;
+}
+/*end header*/
+#content {
+    clear: both;
+    width: 76%;
+    margin: auto;
+    position: relative;
+}
+
+#content-left {
+    width: 24%;
+    float: left;
+}
+
+
+.list ul {
+    height: auto;
+    width: 91%;
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    margin-top: 0px;
+}
+
+    .list ul li {
+        width: 100%;
+        position: relative;
+    }
+
+        .list ul li a {
+            text-align: center;
+            background: url('../Image/icon list.png') no-repeat 10px center;
+            left: auto;
+            color: #fff;
+            font-size: 13px;
+            padding: 12px 20px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+        }
+
+            .list ul li a:hover {
+                background-color: #df1f26;
+            }
+
+.list > ul > li > ul {
+    display: none;
+}
+
+.list > ul > li:hover > ul {
+    display: block;
+    top: 0px;
+    z-index: 2;
+    position: absolute;
+    left: 100%;
+}
+/*endl listt danh muc*/
+.block-left {
+    max-width: 91%;
+}
+
+.ul-tintuc {
+    padding-right: 15px;
+    max-width: 100%;
+    list-style-image: url(../Image/ul_li.png);
+    padding-left: 15px;
+}
+
+    .ul-tintuc li:not(:last-child) {
+        border-bottom: 1px dashed #e6dbdb;
+        font-size: 13px;
+        font-family: inherit;
+        padding-bottom: 10%;
+    }
+    /*end block tintuc*/
+.ul-dichvu li:hover {
+    box-shadow: inset 0 0 9px #ccc;
+}
+
+.ul-dichvu li .title-dichvu {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+.ul-dichvu li .content-dichvu {
+    font-size: 16px;
+    color: #3c3333;
+    padding: 10px 0px 0px 0px;
+}
+/*end block dịch vụ*/
+/*end content left*/
+#content-right {
+    width: 77%;
+    float: left;
+    margin-left: -15px;
+}
+
+.slider img {
+    width: 100%;
+    
+}
+
+.slider {
+    position: relative;
+    margin-top:1.2%;
+}
+
+.btn-slide {
+    border: none;
+    padding: 8px 16px;
+    position: absolute;
+    top: 50%;
+}
+
+    .btn-slide:hover {
+        background-color: #808080;
+    }
+
+.img-slide {
+    display: none;
+}
+/*end slider*/
+.block {
+    width: 100%;
+    margin-top: 3%;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+    .block a {
+        text-decoration: none;
+        color: #444;
+    }
+
+        .block a:hover {
+            color: #f78484;
+        }
+
+.block-title {
+    background-color: #eeeeee;
+    position: relative;
+    height: 38px;
+    border-bottom: #ea3a3c solid 1px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+    .block-title img {
+        background-color: #f76161;
+        float: left;
+        width: 4%;
+        margin-top: 1%;
+    }
+
+    .block-title h2 {
+        margin-left: 6%;
+        line-height: 40px;
+    }
+
+    .block-title .chuyentrang {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        clear: both;
+    }
+
+    .block-title .trang {
+        color: #ddd;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        border: #ddd solid 1px;
+        padding: 4px;
+        font-weight: bold;
+    }
+
+        .block-title .trang:hover {
+            background-color: #f2ebeb;
+        }
+
+.block-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+    .block-content ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .block-content ul li {
+            list-style: none;
+            float: left;
+            max-width: 25%;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ddd;
+            text-align: center;
+            height: auto;
+        }
+
+            .block-content ul li:hover {
+                box-shadow: inset 0 0 9px #ccc;
+            }
+
+                .block-content ul li:hover .them {
+                    color: red;
+                    font-weight: bold;
+                    background-color: #f19e9e;
+                }
+
+.product {
+    position: relative;
+    height:100%;
+    min-height:350px;
+}
+
+    .product img {
+        padding: 5px;
+        box-sizing: border-box;
+        min-height: 150px;
+    }
+   
+
+    .product .sale {
+        left: 0;
+        background: url(../Image/sale.png) no-repeat;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+    }
+
+    .product .gia-product, .giamgia-product {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        border: none;
+    }
+
+    .product .giamgia-product {
+        color: #ea3a3c;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+.them {
+    padding: 10px 10px;
+    border: #ddd solid 1px;
+    color: #a6a6a6;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ddd;
+}
+
+.block-content img {
+    max-width: 100%;
+}
+/*endl block*/
+.footer {
+    clear: both;
+    width: 100%;
+    background-color: #f6f6f6;
+    height: auto;
+}
+
+.col1, .col2, .col3, .col4 {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    color: #6d3e3e;
+    text-align: center;
+}
+
+.footer-top ul li {
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+    .footer-top ul li a {
+        text-decoration: none;
+    }
+
+.footer ul li a:hover {
+    color: #14b21c;
+}
+
+.footer-bottom {
+    clear: both;
+    min-height: 70px;
+    background-color: #dddddd;
+}
+
+    .footer-bottom .copyright {
+        padding-top: 15px;
+        width: 69%;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .footer-bottom .pay {
+        width: 30%;
+        float: right;
+        padding-top: 15px;
+    }
+    /*endl footer*/
+/*start global*/
+.pointer:hover {
+    cursor: pointer;
+}
+@keyframes fadein {
+    0% {
+    opacity:0;
+    transform:translate(0px,-25px)
+    }
+    0% {
+        opacity: 0;
+        transform: translate(0px,0px)
+    }
+}
+@keyframes tada {
+    0% {
+        transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+    }
+
+    10% {
+        transform: rotate(-3deg) scaleX(0.9) scaleY(0.9);
+    }
+    100% {
+        transform: rotate(0deg) scaleX(1) scaleY(1);
+    }
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(0px,-50%)
+    }
+
+    100% {
+        transform: translate(0px,0px)
+    }
+}
+@keyframes sideinup{
+    0% {
+        top: 100%;
+        opacity:0;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+    top:0%;
+    }
+}
+/*end global*/
 /*
     max-width: 320px (điện thoại di động, hiển thị chiều dọc)
 max-width: 480px (điện thoại di động, hiển thị chiều ngang)
@@ -9,17 +524,15 @@ max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
 min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
 */
 /*!important nếu muốn viết đè css*/
-body {
-    background-color: blue;
-}
-@media all and (max-width:1024px) {
+/*thiết bị tablet*/
+/*@media all and (max-width:1024px) {
     body {
     background-color:red;
     }
-}
+}*/
 /*thiết bị di động*/
-@media all and (max-width:480px) {
+/*@media all and (max-width:480px) {
     body {
         background-color: yellow;
     }
-}
+}*/
