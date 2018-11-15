@@ -2,9 +2,634 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Css/ResetCss.css" rel="stylesheet" />
+    <script src="Js/Prefix.js"></script>
+    <link href="Css/Style.css" rel="stylesheet" />
+    <title>Trang sản phẩm</title>
+    <style>
+        .ul-bc:last-child, .ul-bc:nth-last-child(2) {
+        display:none;
+        }
+    </style>
+    <script>
+        function nexttrang() {
+         
+          
+            var x = $('.ul-bc');
+            var a = Math.floor(Math.random() * 4);
+
+            var b = Math.floor(Math.random() * 5);
+            while (b == a) {
+                b = Math.floor(Math.random() * 5);
+            }
+            var c = Math.floor(Math.random() * 5);
+            while (a == c||c==b) {
+                c = Math.floor(Math.random() * 5);
+            }
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+            x[a].style.display = 'block';
+            x[b].style.display = 'block';
+            x[c].style.display = 'block';
+        }
+    </script>
 </head>
 <body>
+    <!-- wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <div id="header">
+            <div class="header-body">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="Trangchu.html"><img src="Image/Logo.png" alt="hình ảnh đại diện"></a>
 
+                    </div><!--End logo-->
+                    <div class="navigator">
+                        <ul>
+                            <li>
+                                <a href="Trangchu.html" target="_self">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="Sanpham.html" target="_self">Sản phẩm</a>
+                            </li>
+                            <li>
+                                <a href="Tintuc.html" target="_self">Tin tức</a>
+                            </li>
+                            <li>
+                                <a href="Gioithieu.html" target="_self">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="lienhe.html" target="_self">Liên hệ</a>
+                            </li>
+                            <li style="position:relative;">
+                                <span id="gio" style="padding:2px;border:1px solid #f1e9e9;border-radius:50%; position:absolute; background-color:#808080;color:#ffffff;top:-8px;right:5px;">0</span>
+                                <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
+                            </li>
+                        </ul>
+                        <span class="login">
+                            <a href="Dangnhap.html">đăng nhập/</a>
+                            <a href="Dangki.html">đăng kí</a>
+                        </span>
+                    </div><!--End navigator-->
+                </div><!--End hd-top-->
+                <div class="header-bottom">
+                    <div class="title-list pointer">
+                        <span>DANH MỤC SẢN PHẨM</span>
+                    </div><!--End title-list-->
+                    <div class="header-bottom-right">
+                        <div class="search-list">
+                            <select class="pointer">
+                                <option value="0">--Danh mục--</option>
+                                <option value="1">ĐÀN PIANO</option>
+                                <option value="2">ĐÀN GUITAR</option>
+                                <option value="3">ĐÀN ORGAN</option>
+
+                            </select>
+                        </div>
+                        <div class="search">
+                            <form action="Timkiem.html" method="get">
+                                <input type="text" id="txtsearch" placeholder="Nhập từ khóa tìm kiếm" autocomplete="on">
+                                <button type="button" onsubmit="" id="btnSearch" class="search-button pointer">TÌM</button>
+                            </form>
+                        </div><!--End search-->
+                    </div> <!--end header bottom right-->
+                </div><!--End header-bottom-->
+            </div><!--End headder-body-->
+        </div><!--end header-->
+        <div style="clear:both;" id="content">
+            <div id="content-left">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a href="#">ĐÀN GUITAR</a>
+                            <ul>
+                                <li><a href="#">GUITAR YAMAHA</a></li>
+                                <li><a href="#">GUITAR ACCOUSTIC</a></li>
+                                <li><a href="#">GUITAR CLASSIC</a></li>
+                                <li><a href="#">GUITAR ĐIỆN</a></li>
+                                <li><a href="#">GUITAR 12 DÂY</a></li>
+                                <li><a href="#">GUITAR HAWAII</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">ĐÀN PIANO</a>
+                            <ul>
+                                <li><a href="#">PIANO YAMAHA</a></li>
+                                <li><a href="#">PIANO KAWAI</a></li>
+                                <li><a href="#">PIANO JS</a></li>
+                                <li><a href="#">PIANO CASIO</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">ĐÀN ORGAN</a>
+                            <ul>
+                                <li><a href="#">CAMERA CASIO</a></li>
+                                <li><a href="#">CAMERA YAMAHA</a></li>
+                                <li><a href="#">CAMERA ROLAND</a></li>
+                                <li><a href="#">CAMERA TYROS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--End list-->
+                <div class="block block-left">
+                    <div class="block-title">
+                        <img style="width:15%; border-radius:50%;margin-bottom:5px;box-sizing:border-box;" src="Image/icongia.png" alt="Alternate Text" />
+                        <h2 style="color:#4e4c4c">Khoảng giá</h2>
+                    </div>
+                    <div class="block-content">
+                        <ol style="list-style:none; padding:20px 5px;" class="ul-tintuc">
+                            <li>
+                                <input type="number" min="0" style="padding:5px;max-width:100%; margin-bottom:5%;" name="txttu" value="" placeholder="đ Từ" />
+                                <input type="number"  min="0" style="padding:5px;max-width:100%; margin-bottom:5%;" name="txtden" value="" placeholder="đ Đến" />
+                                <button style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left:30%;" onclick="nexttrang();" class="btn pointer">Áp dụng</button>
+                            </li>
+                         
+                        </ol>
+                    </div>
+                </div> <!--end khoảng giá-->
+                <div class="block block-left">
+                    <div class="block-title">
+                        <img style="width:15%; border-radius:50%;margin-bottom:5px;box-sizing:border-box;" src="Image/icontintuc.png" alt="Alternate Text" />
+                        <h2><a href="Tintuc.html">TIN TỨC</a></h2>
+                    </div>
+                    <div class="block-content">
+                        <ol class="ul-tintuc">
+                            <li>
+                                <h3 class="title">
+                                    <a href="tintuc1.html" title="Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?">Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a href="tintuc1.html" title="Top 7 quán cafe có piano cho khách chơi tại TpHCM">Top 7 quán cafe có piano cho khách chơi tại TpHCM</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a href="tintuc1.html" title="Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?">Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a href="http://pianofingers.vn/thu-vien-organ-keyboard/cach-hoc-dan-organ-yamaha-nhanh-nhat.html" title="Cách học đàn organ yamaha nhanh nhất: Xem là biết đánh">Cách học đàn organ yamaha nhanh nhất: Xem là biết đánh</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a href="tintuc1.html" title="Mua đàn Organ trả góp TP. HCM ở đâu? chính sách như thế nào?">Mua đàn Organ trả góp TP. HCM ở đâu? chính sách như thế nào?</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a href="tintuc1.html" title="Top 4 Organ giá 1 đến 3 triệu: Kho đàn mới cũ cho bạn lựa chọn">Top 4 Organ giá 1 đến 3 triệu: Kho đàn mới cũ cho bạn lựa chọn</a>
+                                </h3>
+                            </li>
+                        </ol>
+                    </div>
+                </div> <!--end tintuc-->
+                <div class="block block-left">
+                    <div class="block-title">
+                        <img style="width:15%; border-radius:50%;margin-bottom:5px;box-sizing:border-box;" src="Image/icondichvu.png" alt="Alternate Text" />
+                        <h2><a href="#">DICH VỤ</a></h2>
+                    </div>
+                    <div class="block-content">
+                        <ol style="list-style:none;" class="ul-tintuc ul-dichvu">
+                            <li class="li-dichvu">
+                                <div class="img-dichvu">
+                                    <a href="tintuc1.html"><img src="Image/fixpiano1.jpg" alt="Hikvision CCTV System Foils Attempted Robbery at Abu Dhabi Money Exchange"></a>
+                                </div>
+                                <h3 class="title-dichvu"><a href="tintuc1.html">Sửa piano uy tín tại shop</a></h3>
+                                <p class="content-dichvu">shop chúng tôi có những nghệ nhân chuyên sửa các loại bệnh của piano trong quá trình sử dụng.</p>
+                            </li>
+                            <li class="li-dichvu">
+                                <div class="img-dichvu">
+                                    <a href="tintuc1.html"><img src="Image/fixguitar1.jpg" alt="Hikvision CCTV System Foils Attempted Robbery at Abu Dhabi Money Exchange"></a>
+                                </div>
+                                <h3 class="title-dichvu"><a href="tintuc1.html">Sửa căn chỉnh cần guitar tại shop</a></h3>
+                                <p class="content-dichvu">vấn đề cần cong , cần hỏng là phổ biến nên shop chúng tôi luôn có dịch vụ sửa cần guitar cho khách hàng.</p>
+                            </li>
+                            <li class="li-dichvu">
+                                <div class="img-dichvu">
+                                    <a href="tintuc1.html"><img src="Image/fixguitar2.jpg" alt="Hikvision CCTV System Foils Attempted Robbery at Abu Dhabi Money Exchange"></a>
+                                </div>
+                                <h3 class="title-dichvu"><a href="tintuc1.html">Sửa phím đàn piano, dây guitar</a></h3>
+                                <p class="content-dichvu">shop chúng tôi có dịch vụ đặc biệt cho việc sửa phím đàn, dây đàn. nếu trong thời gian bảo hành sẽ được miễn phí</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div> <!--end dichvu-->
+
+            </div><!--end content left-->
+            <div id="content-right">
+                <div class="block">
+                    <div class="block-title">
+
+                        <img src="Image/star.png" alt="Alternate Text" />
+
+                        <h2><a href="Sanpham.html">Tất cả các sản phẩm</a></h2>
+                        <div id="chuyentrang" class="chuyentrang">
+                            <select onchange="nexttrang();">
+                                <option   value="0"> săp xếp theo</option>
+                                <option  value="1"> mới nhất</option>
+                                <option  value="2"> giá: cao->thấp</option>
+                                <option value="3"> giá: thấp->cao</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <ul class="ul-bc">
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ1.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 61 PHÍM YAMAHA</a></h2>
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ4.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN ROLAND MỸ</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ2.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN CASIO ĐẸP</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ3.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 61 PHÍM CÓ BEND</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ul-bc">
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 62 PHÍM YAMAHA</a></h2>
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar3.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar moris MỸ</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar yamaha ĐẸP</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ5.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 61 PHÍM CÓ BEND</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ul-bc">
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ3.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 65 PHÍM YAMAHA</a></h2>
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar moris MỸ</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
+                                    <img class="newgif" src="Image/new.gif" alt="Alternate Text" />
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar yamaha ĐẸP</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ6.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 64 PHÍM CÓ BEND</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ul-bc">
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ3.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 65 PHÍM YAMAHA</a></h2>
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar moris MỸ</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar yamaha ĐẸP</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ6.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 64 PHÍM CÓ BEND</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ul-bc">
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 62 PHÍM YAMAHA</a></h2>
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar3.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar moris MỸ</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN guitar yamaha ĐẸP</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product">
+                                    <label class="sale"></label>
+                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ5.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
+                                    <h2 class="title-product"><a href="#">ĐÀN ORGAN 61 PHÍM CÓ BEND</a></h2>
+
+                                    <P class="gia-product">
+                                        <del>4.500.000 </del> VNĐ
+                                    </P>
+                                    <p class="giamgia-product">4.200.000 VNĐ</p>
+                                    <button onclick="gio();" class="them pointer">
+                                        THÊM VÀO GIỎ HÀNG
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="phantrang">
+                    <ul>
+                        <li><a onclick="nexttrang();" class="pre" href="#">đầu</a></li>
+                        <li><a onclick="nexttrang();" class="pre" href="#"><</a></li>
+                        <li><a onclick="nexttrang();" class="pre" href="#">1</a></li>
+                        <li><a onclick="nexttrang();" class="pre" href="#">2</a></li>
+                        <li><a onclick="nexttrang();" class="pre" href="#">3</a></li>
+                        <li><a onclick="nexttrang();"class="pre" href="#">4</a></li>
+                        <li><a onclick="nexttrang();" class="pre"href="#">5</a></li>
+                        <li><a onclick="nexttrang();"class="pre" href="#">6</a></li>
+                        <li><a onclick="nexttrang();"class="pre" href="#">7</a></li>
+                        <li><a onclick="nexttrang();" class="pre"href="#">></a></li>
+                        <li><a onclick="nexttrang();" class="pre"href="#">cuối</a></li>
+                    </ul>
+                </div>
+                <span style="clear:both;"></span>
+
+            </div><!--end content right-->
+        </div> <!--end content-->
+        <div style="margin-bottom:20px;clear:both;"></div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="col1">
+                    <ul>
+                        <li><h4>CÔNG TY TNHH PIANO-GUIAR-ORGAN THU THIEN</h4></li>
+                        <li>Địa chỉ: 164/8 đoàn thị liên, phường phú lợi, tp.thủ dầu một, tỉnh bình dương</li>
+                        <li>email: <a href="mailto:baynguyen101097@gmail.com"> baynguyen101097@gmail.com</a></li>
+                        <li>số điện thoại :<a href="tel:01657142225"> 01657142225</a></li>
+                        <li> hotline: 0909689751</li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <ul>
+                        <li> Trung tâm âm nhạc dạy tại nhà</li>
+                        <li> điạ chỉ: 165/8 đoàn thị liên, tp. thủ dầu một, tỉnh bình dương</li>
+                        <li>email: <a href="mailto:baynguyen101097@gmail.com"> baynguyen101097@gmail.com</a></li>
+                        <li>số điện thoại :<a href="tel:01657142225"> 01657142225</a></li>
+                    </ul>
+                </div>
+                <div class="col3">
+                    <ul>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Hình thức giao hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+
+                    </ul>
+                </div>
+                <div class="col4">
+                    <img width="50%" src="Image/Logo.png" alt="piano organ guitar thu thien " /> <br />
+                    trao đổi qua facebook:   <a href="#">
+                        <img src="Image/facebook_small.gif" alt="Alternate Text" />
+                    </a> <br />
+                    theo dõi trên youtube: <a href="#">
+                        <img src="Image/youtube.png" width="50px" alt="Alternate Text" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2018 <span style="color:red;">thien-thu organ piano guitar</span>. All Rights Reserved. Designed By <span style="color:red;">nguyen van bay</span></p>
+                <div class="pay">
+                    <img src="Image/pay1.png" alt="Alternate Text" />
+                    <img src="Image/pay2.png" alt="Alternate Text" />
+                    <img src="Image/pay3.png" alt="Alternate Text" />
+                    <img src="Image/pay4.png" alt="Alternate Text" />
+                </div>
+            </div>
+        </div> <!--end footer-->
+        <div onclick="up();" class="to-up">
+            <img src="Image/up.png" width="100%" alt="Alternate Text" />
+        </div>
+        <!--end to up-->
+        <div class="alert">
+            <div class="alert-content">
+                <div id="alert-noidung" class="alert-noidung"> đã thêm vào giỏ hàng!</div>
+                <a href="#" onclick="dong();" class="alert-close">×</a>
+            </div>
+        </div>
+    </div><!--//end wrapper-->
+    <script src="Js/jquery-3.3.1.min.js"></script>
+    <script src="Js/common.js"></script>
 </body>
 </html>
