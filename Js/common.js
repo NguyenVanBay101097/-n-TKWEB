@@ -1,10 +1,18 @@
 ﻿//preventdefault
+$(document).ready(function () {
+	window.onscroll = function () {
+		scroll();
+	};
+	slide_sp();
+	
+});
+
 $(".pre").click(function (event) {
 	event.preventDefault();
 });
 //// slider
-var dichvuindex = 0;
-slide('img-slide');
+	var dichvuindex = 0;
+	slide('img-slide');
 function slide(classname) {
 	var x = document.getElementsByClassName(classname);
 	for (var i = 0; i < x.length; i++) {
@@ -27,6 +35,7 @@ function transferimg(x) {
 var dv = 0;
 slide_dichvu();
 function slide_dichvu() {
+	
 	var x = document.getElementsByClassName('li-dichvu');
 	for (var i = 0; i < x.length; i++) {
 		x[i].style.display = 'none';
@@ -42,7 +51,6 @@ function slide_dichvu() {
 	setTimeout(slide_dichvu,2000);
 }
 //start slider san pham ban chay
-slide_sp();
 function slide_sp() {
 	var x = document.getElementsByClassName('ul-bc');
 	for (var i = 0; i < x.length; i++) {
@@ -86,9 +94,7 @@ function dong() {
   $('.alert').hide();
 }
 //start to up
-window.onscroll = function ()  {
-	scroll();
-}
+
 function scroll() {
 	var head = document.getElementsByClassName('header-top');
 	if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -106,4 +112,5 @@ function up() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
+
 //start
