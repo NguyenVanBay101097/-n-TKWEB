@@ -1,13 +1,98 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>Đăng nhập</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" type="text/css" href="Css/util.css">
+    <link rel="stylesheet" type="text/css" href="Css/main.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Css/ResetCss.css" rel="stylesheet" />
     <script src="Js/Prefix.js"></script>
     <link href="Css/Style.css" rel="stylesheet" />
-    <title>Trang đăng kí</title>
     <style>
+        .formdangnhap {
+            width: 100%;
+            background-color: aliceblue;
+            
+        }
+
+        .login-left {
+            width: 60%;
+            float: left;
+            height: auto;
+            padding: 2% 2% 2% 2%;
+            clear: both;
+        }
+
+        .login-right {
+            width: 40%;
+            float: left;
+            padding-top: 7%;
+            height: auto;
+        }
+        /* Full-width input fields */
+        .text_password {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        .btn {
+            background-color: #39ac73;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 90%;
+            border-radius: 4px;
+        }
+
+            .btn:hover,
+            .btn:focus {
+                background-color: #2d8659;
+                color: white;
+                cursor: pointer;
+            }
+
+        .btn_face {
+            background-color: #005c99;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 90%;
+            border-radius: 4px;
+        }
+
+        .btn_gmail {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 90%;
+            border-radius: 4px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .forgot_pass {
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -43,11 +128,13 @@
                                 <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
                             </li>
                         </ul>
-                        <span class="login">
-                            <a href="Dangnhap.html">đăng nhập/</a>
-                            <a href="Dangki.html">đăng kí</a>
-                        </span>
+
                     </div><!--End navigator-->
+                    <span class="login">
+                        <a href="Dangnhap.html">đăng nhập/</a>
+                        <a href="Dangki.html">đăng kí</a>
+                        <div style="clear:both;"></div>
+                    </span>
                 </div><!--End hd-top-->
                 <div class="header-bottom">
                     <div class="title-list pointer">
@@ -181,20 +268,69 @@
                 </div> <!--end dichvu-->
 
             </div><!--end content left-->
-            <div id="content-right">
+            <div style="font-family:Roboto-Regular,sans-serif" id="content-right">
                 <div class="block">
                     <div class="block-title">
                         <img src="Image/icondangki.png" alt="Alternate Text" />
-                        <h2><a href="#">Đăng lí</a></h2>
+                        <h2><a href="#">Đăng ký tài khoản</a></h2>
                     </div>
                     <div class="block-content">
-                        <a href="#">khu vực đăng nhập với face book và gmail, icon đã có trong image</a>
-                        <a href="#">1 khu vực tên đăng nhập và mật khẩu</a>
-                        <p>css làm ở trên đầu</p>
+                        <div class="limiter">
+
+                            <div>
+
+                                <h3 style="margin-top:1%;padding:2%;background-color:#e1e8d7;color:#e8c76c;width:100%;"> Chào mừng đến với MyShop. mời đăng kí! </h3>
+
+                                <div class="formdangnhap">
+                                    <div class="login-left">
+
+
+                                        <div class="container">
+                                            <label for="uname"><b>Số điện thoại *</b></label>
+                                            <input class="text_password" type="text" placeholder="Số điện thoại hoặc Email..." name="uname" required>
+                                            <label for="uname"><b>gmail *</b></label>
+                                            <input class="text_password" type="text" placeholder="nhập Email..." name="uname" required>
+                                            <label for="uname"><b>họ tên</b></label>
+                                            <input class="text_password" type="text" placeholder="nhập họ tên..." name="uname" required>
+
+                                            <label><b>Mật Khẩu*</b></label>
+                                            <input class="text_password" type="password" placeholder="tối thiểu 6 kí tự..." name="psw" required>
+
+
+                                            <label>
+                                                <input type="checkbox" checked="checked" name="remember"> tôi đồng ý với điều khoản <br />
+                                                <div> xem chi tiết<a href="#" style="font-size:16px;color:blue"> điểu khoản của chúng tôi</a></div>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="login-right">
+
+                                        <button onclick="window.location='trangchu2.html'" class="btn" type="submit">Đăng ký</button>
+                                        <div>
+                                            <span style="font-size:12px">
+                                                Hoặc, đăng ký bằng
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <button class="btn_face">
+                                                Face book
+                                            </button>
+
+                                        </div>
+                                        <div>
+                                            <button class="btn_gmail" type="submit">Gmail</button>
+                                        </div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--end content right-->
         </div> <!--end content-->
         <div style="margin-bottom:20px;clear:both;"></div>
         <div class="footer">
@@ -218,11 +354,11 @@
                 </div>
                 <div class="col3">
                     <ul>
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">Phương thức thanh toán</a></li>
-                        <li><a href="#">Hình thức giao hàng</a></li>
-                        <li><a href="#">Chính sách đổi trả</a></li>
-                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="huongdanmuahang.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="Lienhe.html">Liên hệ và góp ý</a></li>
+                        <li><a href="thanhtoanvabaomat.html">thanh toán và bảo mật</a></li>
+                        <li><a href="hinhthucgiaohang.html">giao hàng-đổi trả</a></li>
+                        <li><a href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
 
                     </ul>
                 </div>
@@ -259,5 +395,15 @@
     </div><!--//end wrapper-->
     <script src="Js/jquery-3.3.1.min.js"></script>
     <script src="Js/common.js"></script>
+    <script src="Js/run.js"></script>
+    <script>
+        $('.list>ul>li>a ').click(function () {
+            window.location = 'Guitar.html';
+        });
+        $('.list>ul>li>ul a ').click(function () {
+            window.location = 'guitaryamaha.html';
+        });
+
+    </script>
 </body>
 </html>

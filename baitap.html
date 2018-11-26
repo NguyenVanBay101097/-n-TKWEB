@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+        số a: <input type="text" name="a" id="a" value="" /><br />
+        số b<input type="text" name="b" value="" id="b" /><br />
+        số c <input type="text" disabled name="ketqua" id="kq" value="" /><br />
+        <button onclick="cong(a.value,b.value)">cộng</button>
+        <button onclick="tru(a.value,b.value)">trừ</button>
+        <button onclick="nhan(a.value,b.value)">nhân</button>
+        <button onclick="chia(a.value,b.value)">chia</button>
+    <script>
+        function cong(a,b) {
+            kq.value = parseInt(a) + parseInt(b);
+            
+        }
+
+        function tru(a,b) {
+            kq.value = parseInt(a) - parseInt(b);
+
+        }
+        function nhan(a, b) {
+            kq.value = parseInt(a) * parseInt(b);
+
+        }
+        function chia(a, b) {
+            kq.value = parseInt(a) / parseInt(b);
+
+        }
+    </script>
+</body>
+</html>

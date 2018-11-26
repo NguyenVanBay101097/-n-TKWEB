@@ -8,67 +8,93 @@
     <link href="Css/Style.css" rel="stylesheet" />
     <title>Trang tư vấn chi tiết</title>
     <style>
-        .router a {
-            color: #162cd9;
-            font-size: 19px;
-            margin: 2%;
-            text-decoration: none;
+        #content-right {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-            .router a:hover {
-                color: #d58657;
+            #content-right h2 {
+                margin: 2% 0;
             }
-       
-        .table-gio,.tongcong {
-            text-align: center;
-            border-left: 1px solid #f1e9e9;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            border-collapse: collapse;
-            margin:3% 0;
-            width: 100%;
+
+            #content-right p {
+                line-height: 1.5;
+            }
+
+        .share img {
+            width: 30px;
         }
-            .table-gio tr {
-                border-bottom: 1px solid #f1e9e9;
-                width:100%;
+
+        .binhluan input[type=text], .binhluan input[type=tel] {
+            width: 45%;
+            padding: 5px 10px;
+        }
+
+        .binhluan textarea {
+            width: 90.5%;
+            margin: 3% 0;
+            height: 100px;
+        }
+
+        .ol-tuvan {
+            padding: 2%;
+        }
+
+            .ol-tuvan li {
+                list-style: none;
+                float: left;
+                width: 50%;
+                font-family: Arial;
+                text-align: center;
+                margin-top: 2%;
+                font-size: 12px;
             }
-                .table-gio tr:nth-child(odd) {
-                    background-color:#ebf1f2;
+
+                .ol-tuvan li:nth-child(3) {
+                    clear: both;
+                    float: left;
                 }
-            .table-gio tr th{
-                background-color:#7596a7;
-                padding:5px 0;
-                border-right:1px solid #f1e9e9;
+
+        .tuvan .img-tuvan {
+            max-width: 80%;
+        }
+
+            .tuvan .img-tuvan img {
+                width: 100%;
+                box-sizing: border-box;
             }
-                .table-gio tr td:nth-child(2) {
-                width:22%;
-                }
-                .table-gio tr td:first-child {
-                   width: 40%;
-                   min-width:120px;
-                }
-               
-                .table-gio tr td,.tongcong tr td {
-                    border-right: 1px solid #f1e9e9;
-                    padding:10px 10px;
-                }
-                .table-gio .img-sanpham {
-                    max-width:20%;
-                }
-            .table-gio .delete {
-            width:26px;
+
+        .tuvan p {
+            text-align: left;
+            padding-right: 10%;
+            font-size: 13px;
+            color: #858585
+        }
+
+        .binhluan-item {
+            margin-top: 2%;
+        }
+
+            .binhluan-item .avatar {
+                padding: 5px 8px;
+                float: left;
+                background-color: yellow;
             }
-            .table-gio td .delete:hover {
-                box-shadow:2px 2px 8px #a39e9e;
-            }            .table-gio td .tieude {
-            text-decoration:none;
-            color:#4051d4;
+
+            .binhluan-item h4 {
+                float: left;
+                margin-left: 5px;
             }
-            .table-gio td .tieude:hover {
-                color:#d16868;
+
+            .binhluan-item .noidung {
+                clear: both;
+                margin-left: 3.5%;
+                position: relative;
             }
-            
+
+        .binhluan-item-traloi {
+            background-color: #d8ecf1;
+        }
     </style>
-  
 </head>
 <body>
     <!-- wrapper -->
@@ -254,250 +280,190 @@
 
             </div><!--end content left-->
             <div id="content-right">
-                <div class="router" style="margin:2% 0;"><a href="Trangchu.html">Trang chủ</a>><a href="Giohang.html">Giỏ hàng </a> </div>
-                <table class="table-gio">
-                    <tr>
-                        <th colspan="2">Sản phẩm</th>
-                        <th>giá</th>
-                        <th>số lượng</th>
-                        <th>Tổng cộng</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td><img class="img-sanpham" src="Image/guitar1.jpg" alt="Alternate Text" /></td>
-                        <td><a class="tieude" href="Chitietsanpham.html">YAMAHA F-6000 acoustic guitar</a></td>
-                        <td>1,400,000₫</td>
-                        <td><input type="number" style="width:30px;" name="name" value="1" min="1" /></td>
-                        <td>1,400,000₫</td>
-                        <td><a href="#"><img class="delete" src="Image/icondelete.png" alt="Alternate Text" /></a></td>
-                    </tr>
-                    <tr>
-                        <td><img class="img-sanpham" src="Image/guitar2.jpg" alt="Alternate Text" /></td>
-                        <td><a class="tieude" href="Chitietsanpham.html">YAMAHA F-6000 acoustic guitar</a></td>
-                        <td>1,400,000₫</td>
-                        <td><input type="number" style="width:30px;" name="name" value="1" min="1" /></td>
-                        <td>1,400,000₫</td>
-                        <td><a href="#"><img class="delete" src="Image/icondelete.png" alt="Alternate Text" /></a></td>
-                    </tr>
-                    <tr>
-                        <td><img class="img-sanpham" src="Image/guitar4.png" alt="Alternate Text" /></td>
-                        <td><a class="tieude" href="Chitietsanpham.html">YAMAHA F-6000 acoustic guitar</a></td>
-                        <td>1,400,000₫</td>
-                        <td><input type="number" style="width:30px;" name="name" value="1" min="1" /></td>
-                        <td>1,400,000₫</td>
-                        <td><a href="#"><img class="delete" src="Image/icondelete.png" alt="Alternate Text" /></a></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:right; padding-right:2%; " colspan="6">
-                            <a href="Sanpham.html">  <input type="button" style="color:white" name="name" class="btn pointer btn-blue" value="Tiếp tục mua hàng" /></a>
+                <div style="background-color:#f8f8f8"><a href="Trangchu.html">Trang chủ</a>><a href="Tuvan.html">Tư vấn </a> > <a href="tuvanchitiet.html">PHÂN PHỐI KAWAI</a></div>
 
-                                 <input type="button" name="name" class="btn capnhat pointer btn-blue" value="Cập nhật" />
-                        </td>
-                    </tr>
-                </table>
-                <table style="border:1px solid #f1e9e9; margin-top:2%;width:70%;float:right;" class="tongcong">
-                    <tr>
-                        <td>Tổng cộng</td>
-                        <td>3,000,000 vnđ</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="font-weight:bold;">
-                            <button class="btn pointer btn-blue">
-                                <a href="Thanhtoan.html">  <span style="float:left;text-align:right;width:60%; padding-top:5px; font-size:18px; color:white;"> Tiến hành thanh toán</span></a> <img src="Image/gio.jpg" style="float:left;width:8%; border-radius:50%;" alt="Alternate Text" />
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-                <span style="clear:both;"></span>
-                <div class="block">
-                    <div class="block-title">
+                <H2>THIEN THU MUSIC PHÂN PHỐI KAWAI K-800 CHÍNH HÃNG <BR /> </H2>
 
-                        <img src="Image/star.png" alt="Alternate Text" />
+                <p>
+                    Là một cấy đàn cao cấp trong dòng K series, piano K-800 có kiểu dáng sang trọng, thanh lịch, âm điệu chuẩn piano acoustic. Cùng với nhiều tính năng vượt trội, thì k-800 được rất nhiều người ưa chuộng và tìm mua. Vậy đâu là cơ sở bán đàn Kawai K-800 uy tín, đảm bảo chất lượng. Câu trả lời sẽ có trong bài viết ngay dưới đây cho các bạn yêu piano.
+                </p>
+                <h2>Tại sao bạn nên lựa chọn  đàn piano Kawai k-800</h2>
+                <p>
+                    Những chiếc piano k-800 nói riêng và những chiếc đàn của hàng Kawai nói chung đều có chất âm dày, đầy đặn và ấm áp. Đặc biệt hơn là ở điểm những chiếc đàn của thương hiệu này, càng chơi với thời gian lâu thì lại càng cho ra tiếng đàn hay và sáng. Âm thanh của piano Kawai mang tới cho người nghe cảm giác cuốn hút, vô cùng dễ chịu, và không bị mỏi tai nhức đầu cho dù có ngồi nghe tiếng đàn hàng giờ đồng hồ.
+                </p>
+                <img src="Image/pianotv1.jpg" alt="Alternate Text" />
+                <p>
+                    Bộ máy cơ Millennium III Action của Kawai K-800 được chế tạo bằng ABS - Carbon. Là một chất liệu nổi tiếng của Kawai mang đặc điểm mạnh mẽ và cứng cáp, cho phép tạo ra các bộ phận hoạt động nhẹ hơn mà không phải hao tốn nhiều sức lực.
 
-                        <h2><a href="Sanpham.html">SẢN PHẨM LIÊN QUAN </a></h2>
-                        <div id="chuyentrang" class="chuyentrang">
-                            <a class="trang pre" onclick="nextslide('ul-bc');" href="#"><</a>
-                            <a class="trang pre" onclick="nextslide('ul-bc');" href="#">></a>
+                    Chất liệu phím Neotex cũng là một điểm mạnh của hãng Kawai cũng là một điểm nhấn vô cùng ấn tượng. Neotex được làm từ sợi cellulose mang lại sự láng mịn và giảm thiểu việc sử dụng nguyên vật liệu từ thiên nhiên là ngà voi và gỗ mun.
+                </p>
+                <h2>Việt Thương music đơn chỉ cung cấp đàn Kawai k-800 uy tín   </h2>
+                <p>
+                    Với nhiều ưu điểm nổi trội, cũng như mang trên mình thương hiệu nổi tiếng Kawai của Nhật Bản, thì Kawai k-800 được rất nhiều bạn yêu piano tin tưởng lựa chọn cho bản thân mình. Cây đàn phù hợp cho mọi đối tượng dù là giảng dạy, người chơi piano lâu hay người mới tập chơi thì cây đàn này đều đáp ứng được hết mọi yêu cầu.
+
+                    Trên thị trường hiện nay, có rất ít các cơ sở bán đàn Kawai k-800 chính hãng, đảm bảo chất lượng. Nhưng nếu không có sự tìm hiểu kỹ càng thì bạn cũng rất dễ mua phải hàng giả hàng nhái kém chất lượng.
+
+                </p>
+                <img src="Image/kawai.jpg" alt="Alternate Text" />
+                <h2>Tại sao bạn nên mua đàn piano Kawai k-800 tại Việt Thương Music</h2>
+                <p>Bởi chúng tôi là cơ sở chuyên bán đàn Kawai k-800 cấp đàn chính hãng, chất lượng. Nên khi bạn đến với chúng tôi sẽ nhận được rất nhiều lợi ích khác nhau như:</p>
+                <ul>
+                    <li>Công ty Việt Thương chúng tôi sở hữu hệ thống Showroom piano và kho đàn lớn bậc nhất Việt Nam. Giúp bạn có nhiều lựa chọn hơn, sao cho tìm được chiếc đàn ưng ý nhất.</li>
+
+                    <li>Có nhiều đại lý, cửa hàng trực thuộc hệ thống của công ty Việt Thương trên khắp đất nước từ bắc vào nam.</li>
+                    <li>-Tất cả mọi cây đàn đều nhập khẩu nguyên chiếc, từ nhiều thương hiệu nổi tiếng khác nhau đến từ các nước trên thế giới.</li>
+                    <li>Tất cả các cửa hàng bán đàn Kawai k-800 của Việt Thương đảm bảo không có trường hợp gian dối bán cho khách hàng hàng giả, hàng nhái, hàng kém chất lượng.</li>
+                    <li>Chế độ bảo hàng chính hãng, lâu năm giúp khách hàng yên tâm hơn khi mua sản phẩm tại công ty chúng tôi.</li>
+                </ul>
+                <img src="Image/kawai2.jpg" alt="Alternate Text" />
+                <h2>Những ưu đãi bạn sẽ nhận được khi mua sản phẩm tại Việt Thương music</h2>
+                <ul>
+                    <li>Địa chỉ bán đàn Kawai k-800, cũng như các loại đàn piano khác, với hình thức mua trả góp lãi suất thấp.</li>
+                    <li>
+                        Giao hàng tận địa chỉ khách hàng trên toàn quốc.
+                    </li>
+                    <li>-Thời gian bảo hành 5 năm theo nhà sản xuất đàn.</li>
+                    <li>Có nhiều phần quà tặng kèm cho khách hàng khi đến tới địa chỉ bán đàn Kawai k-800 tại Việt Thương music</li>
+                    <li>Bảo dưỡng dây đàn thường xuyên do các kỹ thuật viên được tập huấn bài bản tại nước ngoài, đến tận nhà quý khách thực hiện</li>
+                </ul>
+                <div class="share">
+                    <img class="pointer" src="Image/iconshare.jpg" alt="Alternate Text" />
+                    <img class="pointer" src="Image/facebook_small.gif" alt="Alternate Text" />
+                    <img class="pointer" src="Image/icongmail.png" alt="Alternate Text" />
+                    <img class="pointer" src="Image/iconpinterest.png" alt="Alternate Text" />
+                </div>
+                <hr />
+                <h2>BÌNH LUẬN</h2>
+                <p class="binhluan">
+                    <input type="text" name="name" value="" placeholder="tên*" />
+                    <input type="tel" name="name" value="" placeholder="số điện thoại*" /> <br />
+                    <textarea placeholder="nhập nội dung"></textarea>
+                    <input type="button" name="name" class="btn" value="Bình luận" />
+                </p>
+                <br />
+                <div>2 bình luận</div>
+                <hr />
+                <div class="binhluan-item">
+                    <span class="avatar">L</span> <h4>lê Anh</h4>
+                    <div class="noidung">
+                        Sao mình thấy trên các trang khác để giá chính hãng của cây này dao động chỉ từ 63-69 triệu mà ở Việt Thương lại cao hơn nhiều vậy
+                        <div class="binhluan-item-traloi">
+                            <span class="avatar">N</span> <h4>Ngọc thảo  <span style="color:#f7da8b">quản trị viên</span></h4>
+                            <div class="noidung">Chào anh Lê Anh. Việt Thương cung cấp hàng chính hãng với giá niêm yết toàn hệ thống, được bảo hành chính hãng với chế độ hậu mãi chính hãng tốt nhất còn với các cửa hàng bên ngoài thì em không đảm bảo về giá và nguồn gốc hàng hóa ạ. Cảm ơn anh đã liên hệ Việt Thương Music!</div>
+                            <br />  <input type="button" class="btn pointer" name="name" value="Trả lời" />
                         </div>
                     </div>
+
+                </div>
+                <br />
+                <hr />
+                <h2>TIN LIÊN QUAN</h2>
+                <div class="block">
+
                     <div class="block-content">
-                        <ul class="ul-bc">
+                        <ol class="ol-tuvan">
                             <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ1.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 61 PHÍM YAMAHA</a></h2>
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv1.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan"><a href="chitiettuvan.html">THIEN_THU music phân phối Kawai K-800 chính hãng</a></h3>
+                                    <p>
+                                        Là một cấy đàn cao cấp trong dòng K series, piano K-800 có kiểu dáng sang trọng, thanh lịch, âm điệu chuẩn piano acoustic. Cùng với nhiều tính năng vượt trội, thì k-800 được rất nhiều người ưa chuộng và tìm mua. Vậy đâu là cơ sở bán đàn Kawai K-800 uy tín, đảm bảo chất lượng. Câu trả lời sẽ có trong bài viết ngay dưới
+                                    </p>
                                 </div>
                             </li>
                             <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ4.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN ROLAND MỸ</a></h2>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Cập nhật bảng giá đàn piano acoustic MỚI NHẤT
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Cập nhật bảng giá đàn piano acoustic
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv3.png" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Top 5 đàn piano cho người mới bắt đầu lý tưởng nhất
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương xin đề xuất Top 5 đàn piano cho người mới bắt đầu lý tưởng nhất.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv4.png" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Những cây đàn piano tầm 40 triệu bạn khó có thể chối từ
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương sẽ giới thiệu những cây đàn piano tầm 40 triệu sẽ khiến bạn khó có thể chối từ.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv5.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Những cây đàn piano tầm 40 triệu bạn khó có thể chối từ
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương sẽ giới thiệu những cây đàn piano tầm 40 triệu sẽ khiến bạn khó có thể chối từ.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv6.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Những cây đàn piano tầm 40 triệu bạn khó có thể chối từ
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương sẽ giới thiệu những cây đàn piano tầm 40 triệu sẽ khiến bạn khó có thể chối từ.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv7.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Những cây đàn piano tầm 40 triệu bạn khó có thể chối từ
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương sẽ giới thiệu những cây đàn piano tầm 40 triệu sẽ khiến bạn khó có thể chối từ.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tuvan">
+                                    <div class="img-tuvan">    <a href="chitiettuvan.html"> <img src="Image/pianotv4.png" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <h3 class="title-tuvan">
+                                        <a href="chitiettuvan.html">
+                                            Những cây đàn piano tầm 40 triệu bạn khó có thể chối từ
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Sau đây Việt Thương sẽ giới thiệu những cây đàn piano tầm 40 triệu sẽ khiến bạn khó có thể chối từ.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
 
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ2.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN CASIO ĐẸP</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ3.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 61 PHÍM CÓ BEND</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="ul-bc">
-                            <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 62 PHÍM YAMAHA</a></h2>
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar3.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN guitar moris MỸ</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN guitar yamaha ĐẸP</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ5.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 61 PHÍM CÓ BEND</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="ul-bc">
-                            <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ3.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 65 PHÍM YAMAHA</a></h2>
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN ROLAND MỸ" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN guitar moris MỸ</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/guitar6.jpg" title="ĐÀN ORGAN CASIO ĐẸP" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN guitar yamaha ĐẸP</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <label class="sale"></label>
-                                    <div class="img-product">    <a href="Chitietsanpham.html"> <img src="Image/organ6.jpg" title="ĐÀN ORGAN 61 PHÍM CÓ BEND" /> </a></div>
-                                    <h2 class="title-product"><a href="chitietsanpham.html">ĐÀN ORGAN 64 PHÍM CÓ BEND</a></h2>
-
-                                    <P class="gia-product">
-                                        <del>4.500.000 </del> VNĐ
-                                    </P>
-                                    <p class="giamgia-product">4.200.000 VNĐ</p>
-                                    <button onclick="gio();" class="them pointer">
-                                        THÊM VÀO GIỎ HÀNG
-                                    </button>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
 
                 </div>
@@ -592,8 +558,7 @@
                 <div id="alert-noidung" class="alert-noidung"> đã thêm vào giỏ hàng!</div>
                 <a href="#" onclick="dong();" class="alert-close">×</a>
             </div>
-        </div>
-        <!-- moile screen -->
+        </div> <!-- moile screen -->
         <div class="mobile">
             <table>
                 <tr>
@@ -616,15 +581,6 @@
         });
         $('.list>ul>li>ul a ').click(function () {
             window.location = 'guitaryamaha.html';
-        });
-        $('.capnhat').click(function () {
-            $('.alert').show().delay(2000).slideUp(function () {
-                $(this).hide();
-            });
-            $('#alert-noidung').text('giỏ hàng cập nhật thành công !!!');
-        });
-        $('.delete').click(function () {
-            $(this).closest("tr").hide();
         });
     </script>
 </body>

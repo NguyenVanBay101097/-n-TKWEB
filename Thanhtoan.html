@@ -1,99 +1,104 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Đăng nhập</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--===============================================================================================-->
-
-    <link rel="stylesheet" type="text/css" href="Css/util.css">
-    <link rel="stylesheet" type="text/css" href="Css/main.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Css/ResetCss.css" rel="stylesheet" />
     <script src="Js/Prefix.js"></script>
     <link href="Css/Style.css" rel="stylesheet" />
+    <title>Trang tư vấn chi tiết</title>
     <style>
-        .formdangnhap {
-            width: 100%;
-            background-color: aliceblue;
-            height: 300px;
+        .router a {
+            color: #162cd9;
+            font-size: 19px;
+            margin: 2%;
+            text-decoration: none;
         }
 
-        .login-left {
-            width: 60%;
-            float: left;
-            height: auto;
-            padding: 2% 2% 2% 2%;
-            clear: both;
-        }
-
-        .login-right {
-            width: 40%;
-            float: left;
-            padding-top: 7%;
-            height: auto;
-        }
-        /* Full-width input fields */
-        .text_password {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 20px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        /* Set a style for all buttons */
-        .btn {
-            background-color: #39ac73;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 90%;
-            border-radius: 4px;
-        }
-
-            .btn:hover,
-            .btn:focus {
-                background-color: #2d8659;
-                color: white;
-                cursor: pointer;
+            .router a:hover {
+                color: #d58657;
             }
-
-        .btn_face {
-            background-color: #005c99;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 90%;
-            border-radius: 4px;
+        .dangnhap {
+            background-color: #77b3be;
+            padding:1.2%;
+            color:white;
         }
-
-        .btn_gmail {
-            background-color: #ff4d4d;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 90%;
-            border-radius: 4px;
+        .thongtin {
+            width: 40%;
         }
-
-        .container {
-            padding: 20px;
+        .donhang {
+            width: 60%;
         }
-
-        .forgot_pass {
-            float: right;
+        .thongtin , .donhang{
+            margin-top:1.3%;
+        float:left;
+        height:auto;
+        padding:1.2%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+            .thongtin h2, .thongtin h3, .donhang h2, .donhang h3 {
+                text-transform: uppercase;
+                font-size: 15px;
+                border-bottom: 1px solid #cac8c8;
+            }
+            .thongtin label {
+            color:#746a6a;
+            clear:both;
+            margin:10px 0;
+            }
+        .text {
+            margin:2% 0;
+        width:88%;
+        }
+        .donhang table {
+            text-align: center;
+            border: 1px solid #f1e9e9;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-collapse: collapse;
+            margin: 3% 0;
+            width: 100%;
+        }
+            .donhang table tr td {
+                border: 1px solid #f1e9e9;
+                padding: 10px 10px;
+            }
+        .donhang table tr th {
+            padding: 5px 0;
+            border-right: 1px solid #f1e9e9;
+        }
+            .donhang table tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+        .chinhsach {
+            background-color: #f2f2f2;
+            padding: 2%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+            .chinhsach p {
+            padding:2% 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:#815c5c;
+            font-weight:bold;
+            }
+            .chinhsach label {
+                padding: 2% 0;
+                color:red;
+            }
+            .chinhsach ul {
+                padding-left: 2%;
+            }
+            .chinhsach ul li {
+            list-style:circle;
+            line-height:2;
+            }
+        .btn-dat {
+            background-color: #ff5c62;
+            width:88%;
+            margin-top:15%;
+            padding:10px 0;
         }
     </style>
+
 </head>
 <body>
     <!-- wrapper -->
@@ -118,6 +123,9 @@
                                 <a href="Tintuc.html" target="_self">Tin tức</a>
                             </li>
                             <li>
+                                <a href="Tuvan.html" target="_self">Tư vấn</a>
+                            </li>
+                            <li>
                                 <a href="Gioithieu.html" target="_self">Giới thiệu</a>
                             </li>
                             <li>
@@ -125,7 +133,7 @@
                             </li>
                             <li style="position:relative;">
                                 <span id="gio" style="padding:2px;border:1px solid #f1e9e9;border-radius:50%; position:absolute; background-color:#808080;color:#ffffff;top:-8px;right:5px;">0</span>
-                                <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
+                                <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" id="img-gio" alt="giỏ hàng của bạn" /></a>
                             </li>
                         </ul>
 
@@ -152,7 +160,7 @@
                         </div>
                         <div class="search">
                             <form action="Timkiem.html" method="get">
-                                <input type="text" id="txtsearch" placeholder="Nhập từ khóa tìm kiếm" autocomplete="on">
+                                <input type="text" id="txtsearch" name="tukhoa" placeholder="Nhập từ khóa tìm kiếm" autocomplete="on">
                                 <button type="button" onsubmit="" id="btnSearch" class="search-button pointer">TÌM</button>
                             </form>
                         </div><!--End search-->
@@ -204,17 +212,24 @@
                         <ol class="ul-tintuc">
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?">Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?</a>
+                                    <a href="tintuc1.html" title="Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?">
+                                        HAPPY FRIDAY: HAPPY TEACHER’S DAY
+                                    </a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
                                 </h3>
                             </li>
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Top 7 quán cafe có piano cho khách chơi tại TpHCM">Top 7 quán cafe có piano cho khách chơi tại TpHCM</a>
+                                    <a href="tintuc1.html" title="Top 7 quán cafe có piano cho khách chơi tại TpHCM">WORKSHOP: INSIDE THE PIANO</a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
+
                                 </h3>
                             </li>
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?">Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?</a>
+                                    <a href="tintuc1.html" title="Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?">CASIO NHẬN GIẢI THƯỞNG 2018 EDITORS CHOICE</a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
+
                                 </h3>
                             </li>
                             <li>
@@ -238,7 +253,7 @@
                 <div class="block block-left">
                     <div class="block-title">
                         <img style="width:15%; border-radius:50%;margin-bottom:5px;box-sizing:border-box;" src="Image/icondichvu.png" alt="Alternate Text" />
-                        <h2><a href="#">DICH VỤ</a></h2>
+                        <h2><a href="#">Tư vấn</a></h2>
                     </div>
                     <div class="block-content">
                         <ol style="list-style:none;" class="ul-tintuc ul-dichvu">
@@ -268,64 +283,65 @@
                 </div> <!--end dichvu-->
 
             </div><!--end content left-->
-            <div style="font-family:Roboto-Regular,sans-serif" id="content-right">
-                <div class="block">
-                    <div class="block-title">
-                        <img src="Image/icondangki.png" alt="Alternate Text" />
-                        <h2><a href="#">Đăng nhập</a></h2>
-                    </div>
-                    <div class="block-content">
-                        <div class="limiter">
+            <div id="content-right">
+                <div class="router" style="margin:2% 0;"><a href="Trangchu.html">Trang chu</a>><a href="Giohang.html">Giỏ hàng</a>><a href="Thanhtoan.html">Thanh Toán </a> </div>
+                <p class="dangnhap">Bạn đã có tài khoản  <a href="Dangnhap.html">Ấn vào đây để đăng nhập</a></p>
+                <div class="thongtin">
+                    <h2>Thông tin thanh toán</h2>
+                    <label> Họ Tên<span style="color:red;">*</span></label>
+                    <br /><input type="text" class="text" name="name" value="" required/>
+                    <br /><label> Số điện thoại<span style="color:red;">*</span></label>
+                    <br /><input type="number" class="text" name="name" value="" required/>
+                    <br /><label> Địa chỉ<span style="color:red;">*</span></label>
+                    <br /><textarea class="text" required></textarea>
+                    <br /><label> Email</label>
+                    <br /><input type="email" class="text" name="name" value="" />
+                    <br />
+                    <h3>thông tin bổ sung</h3>
+                    <label>ghi chú </label>
+                    <br /><textarea class="text"></textarea>
+                    <br />
+                    <a href="Thanhtoan2.html"> <input type="button" style="color:white" name="name" class="btn pointer btn-dat" value="Đặt Hàng" /></a>
 
-                            <div>
-
-                                <h3 style="margin-top:1%;padding:2%;background-color:#e1e8d7;color:#e8c76c;width:100%;"> Chào mừng đến với MyShop. Đăng nhập ngay! </h3>
-
-                                <div class="formdangnhap">
-                                    <div class="login-left">
-
-
-                                        <div class="container">
-                                            <label for="uname"><b>Số điện thoại hoặc mail*</b></label>
-                                            <input class="text_password" type="text" placeholder="Số điện thoại hoặc Email..." name="uname" required>
-
-                                            <label><b>Mật Khẩu*</b></label>
-                                            <input class="text_password" type="password" placeholder="Nhập mật khẩu..." name="psw" required>
-
-
-                                            <label>
-                                                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
-                                                <span class="forgot_pass">bạn có bị <a href="quenmatkhau.html" style="font-size:20px;color:blue">quên mật khẩu?</a></span>
-                                            </label>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="login-right">
-
-                                        <button onclick="window.location='trangchu2.html'" class="btn" type="submit">đăng nhập</button>
-                                        <div>
-                                            <span style="font-size:12px">
-                                                Hoặc, đăng nhập bằng
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <button class="btn_face">
-                                                Face book
-                                            </button>
-
-                                        </div>
-                                        <div>
-                                            <button class="btn_gmail" type="submit">Gmail</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                </div>
+                <div class="donhang">
+                    <h2>Đơn hàng của bạn</h2>
+                    <table>
+                        <tr>
+                            <th colspan="2">Sản phẩm</th>
+                            <th>Tổng cộng</th>
+                        </tr>
+                        <tr>
+                            <td>GUITAR GIÁ RẺ cho người mới tập chơi - acoustic guitar( đỏ rìa)</td>
+                            <td>1</td>
+                            <td>888,000₫</td>
+                        </tr>
+                        <tr>
+                            <td>piano GIÁ RẺ cho người mới tập chơi - acoustic guitar( đỏ rìa)</td>
+                            <td>1</td>
+                            <td>888,000₫</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Tổng cộng</th>
+                            <th colspan="2">1688,000₫</th>
+                        </tr>
+                    </table>
+                    <div class="chinhsach">
+                        <p class="title">Thanh toán khi nhận hàng - Quý khánh vui lòng trả thêm phí vận chuyển.</p>
+                        <ul>
+                            <li>Bạn chỉ thanh toán khi nhận hàng. Vui long kiểm tra đơn hàng và nơi gửi để chắc chắn bạn nhận đúng hàng từ cửa hàng chúng tôi.</li>
+                            <li>Vui lòng xem chính sách giao hàng của chúng tôi.</li>
+                        </ul>
+                        <p>
+                            Chú ý: Đối với các khách hàng ở ngoài khu vực nội thành TP.HCM, đơn hàng sẽ được chuyển đi bằng hình thức COD sau khi nhân viên chúng tôi xác nhận với khách hàng qua điện thoại.
+                        </p>
+                        <label>***Thời gian nhận hàng từ 3 đến 7 ngày làm việc tùy theo khu vực</label>
+                        <label>***Giá trên chưa bao gồm phí vận chuyển.</label>
                     </div>
                 </div>
-            </div>
+                <span style="clear:both;"></span>
+
+            </div><!--end content right-->
         </div> <!--end content-->
         <div style="margin-bottom:20px;clear:both;"></div>
         <div class="footer">
@@ -381,11 +397,53 @@
             <img src="Image/up.png" width="100%" alt="Alternate Text" />
         </div>
         <!--end to up-->
+        <div class="mess">
+            <img onclick="$('.mess-content').toggle();" src="Image/iconmessenger.png" style="border-radius:50%;" class="pointer" width="100%" alt="Alternate Text" />
+            <div class="mess-content">
+                <div class="title pointer">
+                    <h4>18006715(miễn phí)</h4>
+                    <a onclick=" $('.mess-content').toggle();" class="alert-close pre">×</a>
+                </div>
+                <div class="noidung">
+                    <div class="ad">
+                        <img style="max-width:40px; border-radius:50%;" src="Image/iconpeople.jpg" alt="Alternate Text" />
+                        <p style="background-color:#d0dde1">
+                            Chào anh/chị,  em có thể hỗ trợ được gì cho anh/chị không ạ
+                        </p>
+                    </div>
+                    <div class="client" style="clear:both;">
+                        <img style="max-width:40px; border-radius:50%;" src="Image/iconpeople.jpg" alt="Alternate Text" />
+                        <p style="background-color:#e8e7d4;margin-top:50%; margin-bottom:5%;">
+                            Chào anh/chị,  em có thể hỗ trợ được gì cho anh/chị không ạ
+                        </p>
+                    </div>
+                    <div class="input" style="clear:both">
+                        <input type="text" name="name" placeholder="gõ vào đây và nhấn enter.. " value="" />
+                        <img src="Image/iconlike.jpg" alt="Alternate Text" />
+                        <img src="Image/iconfile.png" alt="Alternate Text" />
+                        <img src="Image/iconfunny.png" alt="Alternate Text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--messenger-->
         <div class="alert">
             <div class="alert-content">
                 <div id="alert-noidung" class="alert-noidung"> đã thêm vào giỏ hàng!</div>
                 <a href="#" onclick="dong();" class="alert-close">×</a>
             </div>
+        </div> <!-- moile screen -->
+        <div class="mobile">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="Image/iconhome.png" width="40px" />Trang chủ</a></td>
+                    <td><a href="#"><img src="Image/iconproduct.png" width="40px" />Sản phẩm</a></td>
+                    <td style="position:relative;">
+                        <span id="gio1" style="padding:2px;border:1px solid #f1e9e9;border-radius:50%; position:absolute; background-color:#808080;color:#ffffff;top:-8px;">0</span>
+                        <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" id="img-gio" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div><!--//end wrapper-->
     <script src="Js/jquery-3.3.1.min.js"></script>
@@ -398,7 +456,6 @@
         $('.list>ul>li>ul a ').click(function () {
             window.location = 'guitaryamaha.html';
         });
-
     </script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Trang chủ</title>
+    <style>
+        * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+        #wrapper {
+        width:100%;
+        text-align:center;
+        color:black;
+        font-size:34px;
+        font-weight:bold;
+        }
+        #header {
+            background-color: #f6f6f6;
+            height:130px;
+        }
+        #content-left {
+            background-color: #eae7aa;
+            float: left;
+            min-height: 700px;
+            width: 25%;
+        }
+        #content {
+        width:76%;
+        margin:auto;
+        }
+        #content-right {
+            background-color: #9eabca;
+            float: left;
+            min-height: 700px;
+            width: 75%;
+        }
+        .footer-top {
+        clear:both;
+        background-color:#b7d48d;
+        }
+        .footer-bottom {
+            height:100px;
+            clear:both;
+            background-color: #bd67be;
+        }
+        .col1, .col2, .col3, .col4 {
+            height: 170px;
+            width: 25%;
+            float: left;
+        }
+        .col1 {
+        background-color:#dce1ed;
+        }
+        .col2 {
+            background-color: #519b7e;
+        }
+        .col3 {
+            background-color: #784f6a;
+        }
+        .col4 {
+            background-color: #442a2a;
+        }
+        @media all and (max-width:1024px) {
+            #content {
+                width:100%;
+            }
+        }
+        @media all and (max-width:640px) {
+            #content,.footer-top {
+            display:flex;
+            flex-direction:column;  
+            }
+            #content-left,.col3 {
+            width:100%; order:2;
+            }
+            #content-right,.col4 {
+            width:100%;
+            order:1;
+            }
+            .col1 {
+            width:100%; order:3;
+            }
+            .col2 {
+                width: 100%;
+                order: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper -->
+    <div   id="wrapper">
+        <!-- Header -->
+        <div id="header">
+          header
+        </div><!--end header-->
+        <div  id="content">
+            <div  id="content-left">
+           content-left
+            </div><!--end content left-->
+            <div  id="content-right">
+               content right
+            </div><!--end content right-->
+        </div> <!--end content-->
+        <div class="footer-top">
+            <div class="col1">col1 footer top</div>
+            <div class="col2">col2 foooter top</div>
+            <div class="col3"> col3 footer top</div>
+            <div class="col4"> col4 footer top</div>
+
+        </div>
+        <div class="footer-bottom">
+         footer bottom
+        </div> <!--end footer-->
+       
+    </div><!--//end wrapper-->
+  
+</body>
+</html>

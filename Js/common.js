@@ -1,12 +1,6 @@
 ﻿//preventdefault
-$(document).ready(function () {
-	window.onscroll = function () {
-		scroll();
-	};
-	slide_sp();
-	
-});
 
+//next sản phấm
 $(".pre").click(function (event) {
 	event.preventDefault();
 });
@@ -26,6 +20,7 @@ function slide(classname) {
 	}
 	x[dichvuindex].style.display = 'block';
 }
+//chuyển slideer
 function transferimg(x) {
 	dichvuindex += x;
 	slide('img-slide');
@@ -63,6 +58,7 @@ function slide_sp() {
 	}
 	x[0].style.display = 'block';
 }
+//function next slide
 function nextslide(classname) {
 	
 	var x = document.getElementsByClassName(classname);
@@ -84,6 +80,7 @@ function gio() {
 	x = parseInt(x);
 	x += 1;
 	document.getElementById('gio').innerText = x.toString();
+	document.getElementById('gio1').innerText = x.toString();
 	$('.alert').show().delay(2000).slideUp(function () {
 		$(this).hide();
 	});
@@ -100,17 +97,47 @@ function scroll() {
 	if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
 		var a=document.getElementsByClassName('to-up');
 		a[0].style.display = 'block';
+		if ($(window).width()<650) {
+			var b = document.getElementsByClassName('mobile');
+			b[0].style.display = 'block';
+		}
+		
 	}
 	else {
 		var a = document.getElementsByClassName('to-up');
 
 		a[0].style.display = 'none';
+		var b = document.getElementsByClassName('mobile');
+
+		b[0].style.display = 'none';
 
 	}
 }
 function up() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
+	$('html,body').animate({
+		scrollTop: 0
+	}, "slow");
+	//document.body.scrollTop = 0;
+	//document.documentElement.scrollTop = 0;
+
 }
 
-//start
+//start đổi ảnh
+function doianh(x) {
+	$('.avatar').css("background","url("+$(x).attr('src')+") center");
+}
+//đọc file
+function readURL(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+
+		reader.onload = function (e) {
+			$('#anh')
+				.attr('src', e.target.result)
+				.width(150)
+				.height(200);
+		};
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}

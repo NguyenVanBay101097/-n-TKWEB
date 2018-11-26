@@ -19,25 +19,13 @@
             width: 100%;
             background-color: aliceblue;
             height: 300px;
+            text-align: center;
         }
 
-        .login-left {
-            width: 60%;
-            float: left;
-            height: auto;
-            padding: 2% 2% 2% 2%;
-            clear: both;
-        }
 
-        .login-right {
-            width: 40%;
-            float: left;
-            padding-top: 7%;
-            height: auto;
-        }
         /* Full-width input fields */
         .text_password {
-            width: 100%;
+            width: 50%;
             padding: 12px 20px;
             margin: 20px 0;
             display: inline-block;
@@ -53,7 +41,8 @@
             margin: 8px 0;
             border: none;
             cursor: pointer;
-            width: 90%;
+            width: 40%;
+            margin: auto;
             border-radius: 4px;
         }
 
@@ -64,27 +53,7 @@
                 cursor: pointer;
             }
 
-        .btn_face {
-            background-color: #005c99;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 90%;
-            border-radius: 4px;
-        }
 
-        .btn_gmail {
-            background-color: #ff4d4d;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 90%;
-            border-radius: 4px;
-        }
 
         .container {
             padding: 20px;
@@ -272,52 +241,31 @@
                 <div class="block">
                     <div class="block-title">
                         <img src="Image/icondangki.png" alt="Alternate Text" />
-                        <h2><a href="#">Đăng nhập</a></h2>
+                        <h2><a href="#">xác minh tài khoản</a></h2>
                     </div>
                     <div class="block-content">
                         <div class="limiter">
 
                             <div>
 
-                                <h3 style="margin-top:1%;padding:2%;background-color:#e1e8d7;color:#e8c76c;width:100%;"> Chào mừng đến với MyShop. Đăng nhập ngay! </h3>
-
+                                <div style="margin-top:1%;padding:2%;color:#e8c76c;width:100%;"> Vui lòng nhập mã trong điện thoại và mật khẩu mới.!!! </div>
                                 <div class="formdangnhap">
                                     <div class="login-left">
 
 
                                         <div class="container">
-                                            <label for="uname"><b>Số điện thoại hoặc mail*</b></label>
-                                            <input class="text_password" type="text" placeholder="Số điện thoại hoặc Email..." name="uname" required>
-
-                                            <label><b>Mật Khẩu*</b></label>
-                                            <input class="text_password" type="password" placeholder="Nhập mật khẩu..." name="psw" required>
-
-
-                                            <label>
-                                                <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
-                                                <span class="forgot_pass">bạn có bị <a href="quenmatkhau.html" style="font-size:20px;color:blue">quên mật khẩu?</a></span>
-                                            </label>
+                                            <label style="color:#7e7777;font-weight:bold;" for="uname">mã OOP*</label><br />
+                                            <input class="text_password" type="text" placeholder="mã oop.." name="uname" required>
+                                            <br />  <label style="color:#7e7777;font-weight:bold;" for="uname">mật khẩu mới*</label><br />
+                                            <input class="text_password" type="password" placeholder="mật khẩu mới" name="uname" required>
 
                                         </div>
 
                                     </div>
                                     <div class="login-right">
 
-                                        <button onclick="window.location='trangchu2.html'" class="btn" type="submit">đăng nhập</button>
-                                        <div>
-                                            <span style="font-size:12px">
-                                                Hoặc, đăng nhập bằng
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <button class="btn_face">
-                                                Face book
-                                            </button>
-
-                                        </div>
-                                        <div>
-                                            <button class="btn_gmail" type="submit">Gmail</button>
-                                        </div>
+                                        <button onclick="window.location='trangchu2.html'" class="btn" type="submit">đổi mật khẩu</button>
+                                        <br />
                                     </div>
                                 </div>
                             </div>

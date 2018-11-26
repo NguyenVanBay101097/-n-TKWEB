@@ -83,6 +83,9 @@
                                 <a href="Tintuc.html" target="_self">Tin tức</a>
                             </li>
                             <li>
+                                <a href="Tuvan.html" target="_self">Tư vấn</a>
+                            </li>
+                            <li>
                                 <a href="Gioithieu.html" target="_self">Giới thiệu</a>
                             </li>
                             <li>
@@ -90,14 +93,16 @@
                             </li>
                             <li style="position:relative;">
                                 <span id="gio" style="padding:2px;border:1px solid #f1e9e9;border-radius:50%; position:absolute; background-color:#808080;color:#ffffff;top:-8px;right:5px;">0</span>
-                                <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
+                                <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" src="Image/gio.jpg" id="img-gio" alt="giỏ hàng của bạn" /></a>
                             </li>
                         </ul>
-                        <span class="login">
-                            <a href="Dangnhap.html">đăng nhập/</a>
-                            <a href="Dangki.html">đăng kí</a>
-                        </span>
+
                     </div><!--End navigator-->
+                    <span class="login">
+                        <a href="Dangnhap.html">đăng nhập/</a>
+                        <a href="Dangki.html">đăng kí</a>
+                        <div style="clear:both;"></div>
+                    </span>
                 </div><!--End hd-top-->
                 <div class="header-bottom">
                     <div class="title-list pointer">
@@ -115,7 +120,7 @@
                         </div>
                         <div class="search">
                             <form action="Timkiem.html" method="get">
-                                <input type="text" id="txtsearch" placeholder="Nhập từ khóa tìm kiếm" autocomplete="on">
+                                <input type="text" id="txtsearch" name="tukhoa" placeholder="Nhập từ khóa tìm kiếm" autocomplete="on">
                                 <button type="button" onsubmit="" id="btnSearch" class="search-button pointer">TÌM</button>
                             </form>
                         </div><!--End search-->
@@ -167,17 +172,24 @@
                         <ol class="ul-tintuc">
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?">Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?</a>
+                                    <a href="tintuc1.html" title="Top 3 cây đàn piano điện dưới 10 triệu đáng để mua nhất?">
+                                        HAPPY FRIDAY: HAPPY TEACHER’S DAY
+                                    </a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
                                 </h3>
                             </li>
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Top 7 quán cafe có piano cho khách chơi tại TpHCM">Top 7 quán cafe có piano cho khách chơi tại TpHCM</a>
+                                    <a href="tintuc1.html" title="Top 7 quán cafe có piano cho khách chơi tại TpHCM">WORKSHOP: INSIDE THE PIANO</a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
+
                                 </h3>
                             </li>
                             <li>
                                 <h3 class="title">
-                                    <a href="tintuc1.html" title="Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?">Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?</a>
+                                    <a href="tintuc1.html" title="Đàn ukulele là gì? Giá bán bao nhiêu tiền? Mua ở đâu rẻ nhất?">CASIO NHẬN GIẢI THƯỞNG 2018 EDITORS CHOICE</a>
+                                    <img src="Image/new.gif" alt="Alternate Text" />
+
                                 </h3>
                             </li>
                             <li>
@@ -201,7 +213,7 @@
                 <div class="block block-left">
                     <div class="block-title">
                         <img style="width:15%; border-radius:50%;margin-bottom:5px;box-sizing:border-box;" src="Image/icondichvu.png" alt="Alternate Text" />
-                        <h2><a href="#">DICH VỤ</a></h2>
+                        <h2><a href="#">Tư vấn</a></h2>
                     </div>
                     <div class="block-content">
                         <ol style="list-style:none;" class="ul-tintuc ul-dichvu">
@@ -231,6 +243,8 @@
                 </div> <!--end dichvu-->
             </div><!--end content left-->
             <div id="content-right">
+                <div style="background-color:#f8f8f8;padding:5px 0;"><a href="Trangchu.html">Trang chủ</a> >> <a href="Tintuc.html"> tin tức </a>  </div>
+
                 <div class="block">
                     <div class="block-title">
 
@@ -242,7 +256,7 @@
                         <ol class="ol-tintuc-phai">
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc1.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc1.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">Happy Friday: Happy Teacher’s Day</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Dành tặng món quà âm nhạc và lời tri ân đến quý Thầy Cô nhân dịp ngày Nhà giáo Việt Nam. Đêm piano recital của những tài năng trẻ cộng đồng Steinway sẽ mang đến những tác phẩm tuyệt vời. Hứa hẹn tạo ra nhiều cung bậc cảm xúc.</p>
@@ -253,7 +267,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">WORKSHOP: INSIDE THE PIANO</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">
@@ -267,7 +281,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc3.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc3.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">CASIO NHẬN GIẢI THƯỞNG 2018 EDITORS CHOICE </a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Ngày 31.07.2018 – Dover, N.J – Casio America, tạp chí âm nhạc uy tín trên thế giới về những phát minh hàng đầu về công nghệ trong lĩnh vực nhạc cụ điện tử, đã thông báo các sản phẩm CT-X (gồm CT-X800/700, CT-X5000/3000) vinh dự...</p>
@@ -278,7 +292,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc4.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc4.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">SỰ KIỆN: PIANO MASTERCLASS WITH LUU HONG QUANG</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Nhân dịp trở lại Việt Nam biểu diễn trong tháng 10 năm 2018, nghệ sĩ Piano Lưu Hồng Quang sẽ kết hợp giảng dạy Masterclass cho các sinh viên,</p>
@@ -289,7 +303,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc5.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc5.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">STEINWAY & SONS XUẤT HIỆN TẠI KHAI MẠC ĐẠI HỘI THỂ THAO CHÂU Á – ASIAD 2018</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Tối 18/8, buổi Lễ khai mạc ASIAD 2018 đã diễn ra tại sân vận động Bung Karno (Jakarta) với sự đầu tư hoành tráng chưa từng có. Với sự tham gia của hơn 10.000 vũ công, âm thanh và ánh sáng…</p>
@@ -300,7 +314,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc6.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc6.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">HAPPY FRIDAY - HALLOWEEN NIGHT: TRẢI NGHIỆM MA THUẬT CỦA CHIẾC ĐÀN STEINWAY SPIRIO</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Halloween Night, đêm biểu diễn Piano với chủ đề Halloween, điều đặc biệt ở của chúng tôi là gì? Đó chính là tất cả các tác phẩm về Halloween trong chương trình mà các nghệ sĩ nổi tiếng biểu diễn sẽ được tái hiện lại qua STEINWAY SPIRIO.</p>
@@ -313,7 +327,7 @@
                         <ol style="display:none;" class="ol-tintuc-phai">
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc7.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc7.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">Happy Friday: Happy Teacher’s Day</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Dành tặng món quà âm nhạc và lời tri ân đến quý Thầy Cô nhân dịp ngày Nhà giáo Việt Nam. Đêm piano recital của những tài năng trẻ cộng đồng Steinway sẽ mang đến những tác phẩm tuyệt vời. Hứa hẹn tạo ra nhiều cung bậc cảm xúc.</p>
@@ -324,7 +338,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc8.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc8.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">WORKSHOP: INSIDE THE PIANO</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">
@@ -338,7 +352,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc9.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc9.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">CASIO NHẬN GIẢI THƯỞNG 2018 EDITORS CHOICE </a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Ngày 31.07.2018 – Dover, N.J – Casio America, tạp chí âm nhạc uy tín trên thế giới về những phát minh hàng đầu về công nghệ trong lĩnh vực nhạc cụ điện tử, đã thông báo các sản phẩm CT-X (gồm CT-X800/700, CT-X5000/3000) vinh dự...</p>
@@ -349,7 +363,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc10.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc10.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">SỰ KIỆN: PIANO MASTERCLASS WITH EVERY NIGHT EVERY WHERE EVERY ONE</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Nhân dịp trở lại Việt Nam biểu diễn trong tháng 10 năm 2018, nghệ sĩ Piano Lưu Hồng Quang sẽ kết hợp giảng dạy Masterclass cho các sinh viên,</p>
@@ -360,7 +374,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc5.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc5.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">GUITAR KẾT NỐI HÀNG TRIỆU TRÁI TIM – ASIAD 2018</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Tối 18/8, buổi Lễ khai mạc ASIAD 2018 đã diễn ra tại sân vận động Bung Karno (Jakarta) với sự đầu tư hoành tráng chưa từng có. Với sự tham gia của hơn 10.000 vũ công, âm thanh và ánh sáng…</p>
@@ -371,7 +385,7 @@
                             </li>
                             <li>
                                 <div class="tintuc">
-                                    <div class="img-tintuc">    <a href="Chitietsanpham.html"> <img src="Image/tintuc2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
+                                    <div class="img-tintuc">    <a href="tintucchitiet.html"> <img src="Image/tintuc2.jpg" title="ĐÀN ORGAN 61 PHÍM YAMAHA" /> </a></div>
                                     <h2 class="title-tintuc"><a href="#">HAPPY DAY - LỄ HỘI PIANO KẾT NỐI</a></h2>
                                     <p class="date-tintuc"><img width="2%" src="Image/calendar.png" alt="Alternate Text" />10/10/2005 20:22:11</p>
                                     <p class="content-tintuc">Halloween Night, đêm biểu diễn Piano với chủ đề Halloween, điều đặc biệt ở của chúng tôi là gì? Đó chính là tất cả các tác phẩm về Halloween trong chương trình mà các nghệ sĩ nổi tiếng biểu diễn sẽ được tái hiện lại qua STEINWAY SPIRIO.</p>
@@ -618,11 +632,11 @@
                 </div>
                 <div class="col3">
                     <ul>
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">Phương thức thanh toán</a></li>
-                        <li><a href="#">Hình thức giao hàng</a></li>
-                        <li><a href="#">Chính sách đổi trả</a></li>
-                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="huongdanmuahang.html">Hướng dẫn mua hàng</a></li>
+                        <li><a href="Lienhe.html">Liên hệ và góp ý</a></li>
+                        <li><a href="thanhtoanvabaomat.html">thanh toán và bảo mật</a></li>
+                        <li><a href="hinhthucgiaohang.html">giao hàng-đổi trả</a></li>
+                        <li><a href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
 
                     </ul>
                 </div>
@@ -650,17 +664,72 @@
             <img src="Image/up.png" width="100%" alt="Alternate Text" />
         </div>
         <!--end to up-->
+        <div class="mess">
+            <img onclick="$('.mess-content').toggle();" src="Image/iconmessenger.png" style="border-radius:50%;" class="pointer" width="100%" alt="Alternate Text" />
+            <div class="mess-content">
+                <div class="title pointer">
+                    <h4>18006715(miễn phí)</h4>
+                    <a onclick=" $('.mess-content').toggle();" class="alert-close pre">×</a>
+                </div>
+                <div class="noidung">
+                    <div class="ad">
+                        <img style="max-width:40px; border-radius:50%;" src="Image/iconpeople.jpg" alt="Alternate Text" />
+                        <p style="background-color:#d0dde1">
+                            Chào anh/chị,  em có thể hỗ trợ được gì cho anh/chị không ạ
+                        </p>
+                    </div>
+                    <div class="client" style="clear:both;">
+                        <img style="max-width:40px; border-radius:50%;" src="Image/iconpeople.jpg" alt="Alternate Text" />
+                        <p style="background-color:#e8e7d4;margin-top:50%; margin-bottom:5%;">
+                            Chào anh/chị,  em có thể hỗ trợ được gì cho anh/chị không ạ
+                        </p>
+                    </div>
+                    <div class="input" style="clear:both">
+                        <input type="text" name="name" placeholder="gõ vào đây và nhấn enter.. " value="" />
+                        <img src="Image/iconlike.jpg" alt="Alternate Text" />
+                        <img src="Image/iconfile.png" alt="Alternate Text" />
+                        <img src="Image/iconfunny.png" alt="Alternate Text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--messenger-->
         <div class="alert">
             <div class="alert-content">
                 <div id="alert-noidung" class="alert-noidung"> đã thêm vào giỏ hàng!</div>
                 <a href="#" onclick="dong();" class="alert-close">×</a>
             </div>
+        </div> <!-- moile screen -->
+        <div class="mobile">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="Image/iconhome.png" width="40px" />Trang chủ</a></td>
+                    <td><a href="#"><img src="Image/iconproduct.png" width="40px" />Sản phẩm</a></td>
+                    <td style="position:relative;">
+                        <span id="gio1" style="padding:2px;border:1px solid #f1e9e9;border-radius:50%; position:absolute; background-color:#808080;color:#ffffff;top:-8px;">0</span>
+                        <a href="Giohang.html" class="gio" title="Giỏ hàng của bạn"><img width="40px" id="img-gio" src="Image/gio.jpg" alt="giỏ hàng của bạn" /></a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div><!--//end wrapper-->
     <script src="Js/jquery-3.3.1.min.js"></script>
     <script src="Js/common.js"></script>
+    <script src="Js/run.js"></script>
     <script>
         slide_sp();
+    </script>
+    <script>
+        $('.list>ul>li>a ').click(function () {
+            window.location = 'Guitar.html';
+        });
+        $('.list>ul>li>ul a ').click(function () {
+            window.location = 'guitaryamaha.html';
+        });
+        $('.btn-tintuc').click(function () {
+            window.location = 'tintucchitiet.html';
+        });
+       
     </script>
 </body>
 </html>
